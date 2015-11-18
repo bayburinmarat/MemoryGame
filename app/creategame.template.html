@@ -1,0 +1,9 @@
+<form class="form-horizontal" ng-submit="mainController.startGame()">
+    <div class="control-group">
+        <label class="control-label">Enter a number of pairs</label>
+        <div class="controls">
+            <input type="number" ng-model="mainController.state.pairNumber" class="span3" />
+            <button class="btn btn-default" type="submit" ng-disabled="mainController.state.pairNumber < 1 || 500 < mainController.state.pairNumber">Start game</button>
+        </div>
+    </div>
+</form>

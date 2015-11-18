@@ -1,0 +1,11 @@
+<h3>
+    Counter: {{ mainController.state.counter }} &nbsp;
+    <button class="btn btn-link" type="button" ng-click="mainController.createNewGame()">Create new game</button>
+</h3>
+<div class="row">
+
+    <div ng-repeat="card in mainController.state.cards" class="card span2" ng-class="card.status.toLowerCase()" ng-click="mainController.openCard(card)">
+        <span>{{ card.index }}</span>
+    </div>
+</div>
+

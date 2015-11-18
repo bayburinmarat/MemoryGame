@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Memory game: bayburinmarat@gmail.com</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/linq.js/2.2.0.2/linq.js"></script>
+    <script src="app/module.js"></script>
+    <script src="app/flow.js"></script>
+    <script src="app/mainController.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.2/css/bootstrap.css">
+    <link href="css/style.css" rel="stylesheet" />
+</head>
+<body ng-app="memoryGame" ng-controller="memoryGame.mainController as mainController">
+    <div class="container-fluid">
+        <h2>Memory game</h2>
+        <div ng-if="mainController.state.action == 'CreateGame'" ng-include="'app/creategame.template.html'"></div>
+        <div ng-if="mainController.state.action == 'Gaming'" ng-include="'app/gaming.template.html'"></div>
+    </div>
+</body>
+</html>
